@@ -60,3 +60,37 @@ html {
 @-ms-viewport {
   width: device-width;
 }
+/*----- Top Navigation Bar ----- */
+
+.transition-background {
+  -webkit-transition: background-color 0.3s ease; /* Safari */
+  -o-transition: background-color 0.3s ease; /* Older Opera */
+  transition: background-color 0.3s ease; /* Standard */
+}
+.app-nav__item:hover,
+.app-nav__item:focus {
+  background: rgba(0, 0, 0, 0.1);
+  color: #f6f6f6;
+}
+
+.app-notification__item {
+  @apply flex px-[20px] py-[8px] border-b border-[#ddd] transition-colors duration-300 ease-in-out hover:bg-[#e0e0e0] focus:bg-[#e0e0e0];
+}
+.app-menu__item:hover,
+.app-menu__item:focus,
+.app-menu__item.active {
+  background: #0d1214;
+  border-left-color: #009688;
+  text-decoration: none;
+  color: #fff;
+}
+
+@layer components {
+  .app-notification__content {
+    @apply max-h-[220px] overflow-y-auto;
+  }
+  .app-notification__item {
+    @apply flex px-[20px] py-[8px] border-b border-[#ddd] transition-colors duration-300 ease-in-out hover:bg-[#e0e0e0] focus:bg-[#e0e0e0]";
+  }
+  
+}
