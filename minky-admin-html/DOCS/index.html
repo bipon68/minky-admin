@@ -8,6 +8,8 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <script src="https://cdn.tailwindcss.com" type="text/tailwindcss"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -63,7 +65,9 @@
                 class="app-notification__content max-h-[220px] overflow-y-auto"
               >
                 <li>
-                  <a class="app-notification__item" href="javascript:;"
+                  <a
+                    class="app-notification__item flex px-[20px] py-[8px] border-b border-[#ddd] transition-colors duration-300 ease-in-out hover:bg-[#e0e0e0] focus:bg-[#e0e0e0]"
+                    href="javascript:;"
                     ><span class="app-notification__icon pr-2.5"
                       ><span class="fa-stack fa-lg"
                         ><i class="fa fa-circle fa-stack-2x text-primary"></i
