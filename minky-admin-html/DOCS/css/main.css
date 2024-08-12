@@ -125,7 +125,11 @@ hr {
     @apply flex px-[20px] py-[8px] border-b border-[#ddd] transition-colors duration-300 ease-in-out hover:bg-[#e0e0e0] focus:bg-[#e0e0e0];
   }
 }
-
+@layer components {
+  .app-notification__item {
+    @apply flex px-[20px] py-[8px] border-b border-[#ddd] transition-colors duration-300 ease-in-out hover:bg-[#e0e0e0] focus:bg-[#e0e0e0]";
+  }
+}
 @layer base {
   .app-notification__content {
     @apply max-h-[220px] overflow-y-auto;
@@ -133,9 +137,8 @@ hr {
   .app-notification__item {
     @apply flex px-[20px] py-[8px] border-b border-[#ddd] transition-colors duration-300 ease-in-out hover:bg-[#e0e0e0] focus:bg-[#e0e0e0]";
   }
- 
+
   .app-header {
     @apply fixed left-0 right-0 top-0 w-full flex bg-teal-700 z-50 pr-4 md:pr-[30px];
   }
 }
- 
