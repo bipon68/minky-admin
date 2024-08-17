@@ -1,4 +1,5 @@
 import React from "react";
+import { FaAngleRight, FaCircle } from "react-icons/fa";
 
 function SideBar() {
   return (
@@ -26,12 +27,13 @@ function SideBar() {
             <a className="app-menu__item" href="#" data-toggle="treeview">
               <i className="app-menu__icon fa fa-laptop"></i>
               <span className="app-menu__label">UI Elements</span>
-              <i className="treeview-indicator fa fa-angle-right"></i>
+              {/* <i className="treeview-indicator fa fa-angle-right"></i> */}
+              <FaAngleRight />
             </a>
             <ul className="treeview-menu">
               <li>
                 <a className="treeview-item" href="tailwind-components.html">
-                  <i className="icon fa fa-circle"></i> Tailwind Elements
+                  <FaCircle /> Tailwind Elements
                 </a>
               </li>
               <li>
@@ -41,17 +43,17 @@ function SideBar() {
                   target="_blank"
                   rel="noopener"
                 >
-                  <i className="icon fa fa-circle"></i> Font Icons
+                  <FaCircle /> Font Icons
                 </a>
               </li>
               <li>
                 <a className="treeview-item" href="ui-cards.html">
-                  <i className="icon fa fa-circle"></i> Cards
+                  <FaCircle /> Cards
                 </a>
               </li>
               <li>
                 <a className="treeview-item" href="widgets.html">
-                  <i className="icon fa fa-circle"></i> Widgets
+                  <FaCircle /> Widgets
                 </a>
               </li>
             </ul>

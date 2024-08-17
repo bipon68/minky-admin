@@ -1,5 +1,6 @@
 import React from "react";
 import { FaBell, FaSearch, FaUser } from "react-icons/fa";
+import { IoMenuSharp } from "react-icons/io5";
 
 function Nav() {
   return (
@@ -8,13 +9,15 @@ function Nav() {
         <a className="app-header__logo" href="index.html">
           Minky
         </a>
-        {/* <!-- Sidebar toggle button-->*/}{" "}
+        {/* <!-- Sidebar toggle button-->*/}
         <a
           className="app-sidebar__toggle"
           href="#"
           data-toggle="sidebar"
           aria-label="Hide Sidebar"
-        ></a>
+        >
+          <IoMenuSharp />
+        </a>
         {/* <!-- Navbar Right Menu--> */}
         <ul className="app-nav">
           <li className="app-search">
