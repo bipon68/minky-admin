@@ -3,8 +3,10 @@ import DashboardPage from "./Dashboard/DashboardPage";
 
 const HomePage = () => {
   return (
-    <div className="mt-16 ml-80">
-      <DashboardPage />
+    <div className="mt-7 ml-56">
+      <div className="">
+        <DashboardPage />
+      </div>
     </div>
   );
 };

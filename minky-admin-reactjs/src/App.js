@@ -14,6 +14,7 @@ function App() {
         <Routes>
           <Route index element={<HomePage />} />
           <Route path="/DashboardPage" element={<DashboardPage />} />
+          <Route path="/" element={<DashboardPage />} />
         </Routes>
       </BrowserRouter>
     </div>
