@@ -3,21 +3,17 @@ import { Link } from "react-router-dom";
 
 const TailwindEleBtn = () => {
   return (
-    <div className="  ">
-      <div className=" ">
-        <div class="tile mb-4 ">
-          <div class="page-header">
-            <div class="row">
-              <div class="col-lg-12">
-                <h2 class="mb-3 line-head" id="buttons">
-                  Buttons
-                </h2>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-7">
-              <p class="bs-component pb-1">
+    <div className=" px-6">
+      <div className=" tile">
+        <div class="page-header  ">
+          <h2 class="text-3xl mb-3 border-b " id="buttons">
+            Buttons
+          </h2>
+        </div>
+        <div class=" mb-4 flex w-full justify-between ">
+          <div class="  w-full">
+            <div class="">
+              <div class="bs-component pb-1 flex gap-1">
                 <button class="btn btn-primary" type="button">
                   Primary
                 </button>
@@ -39,31 +35,31 @@ const TailwindEleBtn = () => {
                 <button class="btn btn-link" type="button">
                   Link
                 </button>
-              </p>
-              <p class="bs-component pb-1">
-                <button class="btn btn-primary" type="button" disabled="">
+              </div>
+              <div class="bs-component pb-1 flex gap-1">
+                <button class="btn btn-primary disabled" type="button">
                   Primary
                 </button>
-                <button class="btn btn-secondary" type="button" disabled="">
+                <button class="btn btn-secondary disabled" type="button">
                   Secondary
                 </button>
-                <button class="btn btn-success" type="button" disabled="">
+                <button class="btn btn-success disabled" type="button">
                   Success
                 </button>
-                <button class="btn btn-info" type="button" disabled="">
+                <button class="btn btn-info disabled" type="button">
                   Info
                 </button>
-                <button class="btn btn-warning" type="button" disabled="">
+                <button class="btn btn-warning disabled" type="button">
                   Warning
                 </button>
-                <button class="btn btn-danger" type="button" disabled="">
+                <button class="btn btn-danger disabled" type="button">
                   Danger
                 </button>
-                <button class="btn btn-link" type="button" disabled="">
+                <button class="btn btn-link disabled" type="button" disabled="">
                   Link
                 </button>
-              </p>
-              <p class="bs-component pb-1">
+              </div>
+              <div class="bs-component pb-1 flex gap-1">
                 <button class="btn btn-outline-primary" type="button">
                   Primary
                 </button>
@@ -82,8 +78,8 @@ const TailwindEleBtn = () => {
                 <button class="btn btn-outline-danger" type="button">
                   Danger
                 </button>
-              </p>
-              <div class="mb-3 bs-component">
+              </div>
+              <div class="mb-3 bs-component flex gap-1">
                 <div
                   class="btn-group"
                   role="group"
@@ -193,20 +189,20 @@ const TailwindEleBtn = () => {
                   </div>
                 </div>
               </div>
-              <div class="bs-component">
-                <button class="btn btn-primary btn-lg" type="button">
+              <div class="bs-component ">
+                <button class="btn btn-primary btn-lg mr-1" type="button">
                   Large button
                 </button>
-                <button class="btn btn-primary" type="button">
+                <button class="btn btn-primary mr-1" type="button">
                   Default button
                 </button>
-                <button class="btn btn-primary btn-sm" type="button">
+                <button class="btn btn-primary btn-sm mr-1" type="button">
                   Small button
                 </button>
               </div>
             </div>
           </div>
-          <div className="">
+          <div className=" w-full">
             <div class="col-lg-5">
               <p class="bs-component pb-1">
                 <button
@@ -263,7 +259,10 @@ const TailwindEleBtn = () => {
                 </div>
               </div>
               <div class="bs-component">
-                <div class="btn-group-vertical" data-toggle="buttons">
+                <div
+                  class="btn-group-vertical grid w-full"
+                  data-toggle="buttons"
+                >
                   <button class="btn btn-primary" type="button">
                     Button
                   </button>
