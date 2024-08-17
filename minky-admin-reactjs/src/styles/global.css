@@ -33,8 +33,7 @@
 
   .app-header__logo:focus,
   .app-header__logo:hover {
-    text-decoration: none;
-    color: #fff;
+    @apply text-white;
   }
 
   .app-sidebar__toggle {
@@ -225,7 +224,7 @@
     bottom: 0;
     left: 0;
     padding-top: 70px;
-    width: 230px;
+    width: 224px;
     overflow: auto;
     z-index: 10;
     background-color: #222d32;
