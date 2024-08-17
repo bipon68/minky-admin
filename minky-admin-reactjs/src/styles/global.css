@@ -250,4 +250,69 @@
     @apply transition-transform duration-300 ease-in-out;
     transform-origin: center;
   }
+  /* Styles for sidebar in mini mode when toggled */
+  @media (min-width: 768px) {
+    .sidebar-mini.sidenav-toggled .app-sidebar__user-name,
+    .sidebar-mini.sidenav-toggled .app-sidebar__user-designation,
+    .sidebar-mini.sidenav-toggled .treeview-indicator {
+      @apply hidden; /* Hide elements */
+    }
+
+    .sidebar-mini.sidenav-toggled .app-sidebar__user-avatar {
+      @apply w-8 h-8; /* Set width and height */
+    }
+
+    .sidebar-mini.sidenav-toggled .app-content {
+      @apply ml-12; /* Margin-left */
+    }
+
+    .sidebar-mini.sidenav-toggled .app-sidebar {
+      @apply left-0 w-12 overflow-hidden; /* Set sidebar position and size */
+    }
+
+    .sidebar-mini.sidenav-toggled .app-sidebar:hover {
+      @apply overflow-visible; /* Overflow on hover */
+    }
+
+    .sidebar-mini.sidenav-toggled .app-menu__item {
+      @apply overflow-hidden; /* Hide overflow */
+    }
+
+    .sidebar-mini.sidenav-toggled .app-menu__item:hover {
+      @apply overflow-visible; /* Overflow on hover */
+    }
+
+    .sidebar-mini.sidenav-toggled .app-menu__item:hover .app-menu__label {
+      @apply opacity-100; /* Show label on hover */
+    }
+
+    .sidebar-mini.sidenav-toggled .app-menu__item:hover + .treeview-menu {
+      @apply visible; /* Show treeview menu on hover */
+    }
+
+    .sidebar-mini.sidenav-toggled .app-menu__label {
+      @apply block absolute top-0 left-12 min-w-[180px] py-3 px-2 -ml-0.5 bg-[#0d1214] rounded-r-lg opacity-0; /* Menu label styling */
+    }
+
+    .sidebar-mini.sidenav-toggled .treeview:hover .app-menu__item {
+      @apply bg-[#0d1214] border-l-4 border-[#009688] text-white; /* Treeview item styles */
+    }
+
+    .sidebar-mini.sidenav-toggled .treeview:hover .app-menu__label {
+      @apply opacity-100; /* Show label on hover */
+    }
+
+    .sidebar-mini.sidenav-toggled .treeview:hover .treeview-menu {
+      @apply max-h-screen opacity-100 visible z-10; /* Expand and show treeview menu */
+    }
+
+    .sidebar-mini.sidenav-toggled .treeview .app-menu__label {
+      @apply rounded-br-none; /* Remove bottom-right border radius */
+    }
+
+    .sidebar-mini.sidenav-toggled .treeview-menu {
+      @apply absolute left-12 min-w-[180px] py-3 opacity-0 rounded-br-lg z-10 invisible; /* Treeview menu styles */
+      transition: visibility 0.3s ease; /* Custom transition for visibility */
+    }
+  }
 }

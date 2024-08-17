@@ -1,170 +1,209 @@
-import React from "react";
-import { FaAngleRight, FaCircle } from "react-icons/fa";
+import React, { useState } from "react";
+import {
+  FaAngleRight,
+  FaChartPie,
+  FaCircle,
+  FaEdit,
+  FaLaptop,
+  FaList,
+} from "react-icons/fa";
+import { AiFillDashboard } from "react-icons/ai";
+import { FiFileText } from "react-icons/fi";
 
-function SideBar() {
+function SideBar({ isSidebarOpen }) {
+  const [expandedMenu, setExpandedMenu] = useState(null);
+
+  const handleTreeviewToggle = (index) => {
+    setExpandedMenu((prevIndex) => (prevIndex === index ? null : index));
+  };
+
   return (
-    <div>
-      <aside className="app-sidebar">
-        <div className="app-sidebar__user">
-          <img
-            className="size-14 rounded-full"
-            src="img/profile.jpg"
-            alt="User Image"
-          />
-          <div>
-            <p className="app-sidebar__user-name">John Doe</p>
-            <p className="app-sidebar__user-designation">Frontend Developer</p>
-          </div>
+    <aside className={`app-sidebar ${isSidebarOpen ? "sidenav-toggled" : ""}`}>
+      <div className="app-sidebar__user">
+        <img
+          className="size-14 rounded-full"
+          src="img/profile.jpg"
+          alt="User"
+        />
+        <div>
+          <p className="app-sidebar__user-name">John Doe</p>
+          <p className="app-sidebar__user-designation">Frontend Developer</p>
         </div>
-        <ul className="app-menu">
-          <li>
-            <a className="app-menu__item active" href="/DashboardPage">
-              <i className="app-menu__icon fa fa-dashboard"></i>
-              <span className="app-menu__label">Dashboard</span>
-            </a>
-          </li>
-          <li className="treeview">
-            <a className="app-menu__item" href="#" data-toggle="treeview">
-              <i className="app-menu__icon fa fa-laptop"></i>
-              <span className="app-menu__label">UI Elements</span>
-              {/* <i className="treeview-indicator fa fa-angle-right"></i> */}
-              <FaAngleRight />
-            </a>
-            <ul className="treeview-menu">
-              <li>
-                <a className="treeview-item" href="tailwind-components.html">
-                  <FaCircle /> Tailwind Elements
-                </a>
-              </li>
-              <li>
-                <a
-                  className="treeview-item"
-                  href="https://fontawesome.com/v4.7.0/icons/"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <FaCircle /> Font Icons
-                </a>
-              </li>
-              <li>
-                <a className="treeview-item" href="ui-cards.html">
-                  <FaCircle /> Cards
-                </a>
-              </li>
-              <li>
-                <a className="treeview-item" href="widgets.html">
-                  <FaCircle /> Widgets
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a className="app-menu__item" href="charts.html">
-              <i className="app-menu__icon fa fa-pie-chart"></i>
-              <span className="app-menu__label">Charts</span>
-            </a>
-          </li>
-          <li className="treeview">
-            <a className="app-menu__item" href="#" data-toggle="treeview">
-              <i className="app-menu__icon fa fa-edit"></i>
-              <span className="app-menu__label">Forms</span>
-              <i className="treeview-indicator fa fa-angle-right"></i>
-            </a>
-            <ul className="treeview-menu">
-              <li>
-                <a className="treeview-item" href="form-components.html">
-                  <i className="icon fa fa-circle"></i> Form Components
-                </a>
-              </li>
-              <li>
-                <a className="treeview-item" href="form-custom.html">
-                  <i className="icon fa fa-circle"></i> Custom Components
-                </a>
-              </li>
-              <li>
-                <a className="treeview-item" href="form-samples.html">
-                  <i className="icon fa fa-circle"></i> Form Samples
-                </a>
-              </li>
-              <li>
-                <a className="treeview-item" href="form-notifications.html">
-                  <i className="icon fa fa-circle"></i> Form Notifications
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li className="treeview">
-            <a className="app-menu__item" href="#" data-toggle="treeview">
-              <i className="app-menu__icon fa fa-th-list"></i>
-              <span className="app-menu__label">Tables</span>
-              <i className="treeview-indicator fa fa-angle-right"></i>
-            </a>
-            <ul className="treeview-menu">
-              <li>
-                <a className="treeview-item" href="table-basic.html">
-                  <i className="icon fa fa-circle"></i> Basic Tables
-                </a>
-              </li>
-              <li>
-                <a className="treeview-item" href="table-data-table.html">
-                  <i className="icon fa fa-circle"></i> Data Tables
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li className="treeview">
-            <a className="app-menu__item" href="#" data-toggle="treeview">
-              <i className="app-menu__icon fa fa-file-text"></i>
-              <span className="app-menu__label">Pages</span>
-              <i className="treeview-indicator fa fa-angle-right"></i>
-            </a>
-            <ul className="treeview-menu">
-              <li>
-                <a className="treeview-item" href="blank-page.html">
-                  <i className="icon fa fa-circle"></i> Blank Page
-                </a>
-              </li>
-              <li>
-                <a className="treeview-item" href="page-login.html">
-                  <i className="icon fa fa-circle"></i> Login Page
-                </a>
-              </li>
-              <li>
-                <a className="treeview-item" href="page-lockscreen.html">
-                  <i className="icon fa fa-circle"></i> Lockscreen Page
-                </a>
-              </li>
-              <li>
-                <a className="treeview-item" href="page-user.html">
-                  <i className="icon fa fa-circle"></i> User Page
-                </a>
-              </li>
-              <li>
-                <a className="treeview-item" href="page-invoice.html">
-                  <i className="icon fa fa-circle"></i> Invoice Page
-                </a>
-              </li>
-              <li>
-                <a className="treeview-item" href="page-calendar.html">
-                  <i className="icon fa fa-circle"></i> Calendar Page
-                </a>
-              </li>
-              <li>
-                <a className="treeview-item" href="page-mailbox.html">
-                  <i className="icon fa fa-circle"></i> Mailbox
-                </a>
-              </li>
-              <li>
-                <a className="treeview-item" href="page-error.html">
-                  <i className="icon fa fa-circle"></i> Error Page
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </aside>
-      ;
-    </div>
+      </div>
+      <ul className="app-menu">
+        <li>
+          <a className="app-menu__item active" href="index.html">
+            <AiFillDashboard />
+            <span className="app-menu__label">Dashboard</span>
+          </a>
+        </li>
+        <li className={`treeview ${expandedMenu === 0 ? "is-expanded" : ""}`}>
+          <a
+            className="app-menu__item"
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              handleTreeviewToggle(0);
+            }}
+          >
+            <FaLaptop />
+            <span className="app-menu__label">UI Elements</span>
+            <FaAngleRight />
+          </a>
+          <ul className={`treeview-menu ${expandedMenu === 0 ? "show" : ""}`}>
+            <li>
+              <a className="treeview-item" href="tailwind-components.html">
+                <FaCircle /> Tailwind Elements
+              </a>
+            </li>
+            <li>
+              <a
+                className="treeview-item"
+                href="https://fontawesome.com/v4.7.0/icons/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaCircle /> Font Icons
+              </a>
+            </li>
+            <li>
+              <a className="treeview-item" href="ui-cards.html">
+                <FaCircle /> Cards
+              </a>
+            </li>
+            <li>
+              <a className="treeview-item" href="widgets.html">
+                <FaCircle /> Widgets
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a className="app-menu__item" href="charts.html">
+            <FaChartPie />
+            <span className="app-menu__label">Charts</span>
+          </a>
+        </li>
+        <li className={`treeview ${expandedMenu === 1 ? "is-expanded" : ""}`}>
+          <a
+            className="app-menu__item"
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              handleTreeviewToggle(1);
+            }}
+          >
+            <FaEdit />
+            <span className="app-menu__label">Forms</span>
+            <FaAngleRight />
+          </a>
+          <ul className={`treeview-menu ${expandedMenu === 1 ? "show" : ""}`}>
+            <li>
+              <a className="treeview-item" href="form-components.html">
+                <FaCircle /> Form Components
+              </a>
+            </li>
+            <li>
+              <a className="treeview-item" href="form-custom.html">
+                <FaCircle /> Custom Components
+              </a>
+            </li>
+            <li>
+              <a className="treeview-item" href="form-samples.html">
+                <FaCircle /> Form Samples
+              </a>
+            </li>
+            <li>
+              <a className="treeview-item" href="form-notifications.html">
+                <FaCircle /> Form Notifications
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li className={`treeview ${expandedMenu === 2 ? "is-expanded" : ""}`}>
+          <a
+            className="app-menu__item"
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              handleTreeviewToggle(2);
+            }}
+          >
+            <FaList />
+            <span className="app-menu__label">Tables</span>
+            <FaAngleRight />
+          </a>
+          <ul className={`treeview-menu ${expandedMenu === 2 ? "show" : ""}`}>
+            <li>
+              <a className="treeview-item" href="table-basic.html">
+                <FaCircle /> Basic Tables
+              </a>
+            </li>
+            <li>
+              <a className="treeview-item" href="table-data-table.html">
+                <FaCircle /> Data Tables
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li className={`treeview ${expandedMenu === 3 ? "is-expanded" : ""}`}>
+          <a
+            className="app-menu__item"
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              handleTreeviewToggle(3);
+            }}
+          >
+            <FiFileText />
+            <span className="app-menu__label">Pages</span>
+            <FaAngleRight />
+          </a>
+          <ul className={`treeview-menu ${expandedMenu === 3 ? "show" : ""}`}>
+            <li>
+              <a className="treeview-item" href="blank-page.html">
+                <FaCircle /> Blank Page
+              </a>
+            </li>
+            <li>
+              <a className="treeview-item" href="page-login.html">
+                <FaCircle /> Login Page
+              </a>
+            </li>
+            <li>
+              <a className="treeview-item" href="page-lockscreen.html">
+                <FaCircle /> Lockscreen Page
+              </a>
+            </li>
+            <li>
+              <a className="treeview-item" href="page-user.html">
+                <FaCircle /> User Page
+              </a>
+            </li>
+            <li>
+              <a className="treeview-item" href="page-invoice.html">
+                <FaCircle /> Invoice Page
+              </a>
+            </li>
+            <li>
+              <a className="treeview-item" href="page-calendar.html">
+                <FaCircle /> Calendar Page
+              </a>
+            </li>
+            <li>
+              <a className="treeview-item" href="page-mailbox.html">
+                <FaCircle /> Mailbox
+              </a>
+            </li>
+            <li>
+              <a className="treeview-item" href="page-error.html">
+                <FaCircle /> Error Page
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
   );
 }
 
