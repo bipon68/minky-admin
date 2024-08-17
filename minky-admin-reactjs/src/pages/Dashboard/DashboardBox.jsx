@@ -4,7 +4,7 @@ import { FaUsers, FaThumbsUp, FaFileAlt, FaStar } from "react-icons/fa";
 const DashboardBox = () => {
   return (
     <div>
-      <div className="w-full flex items-center justify-around gap-4 px-4">
+      <div className="w-full flex items-center justify-around gap-6 px-6">
         <div className=" w-full ">
           <div className="widget-small primary coloured-icon rounded-s-3xl">
             <div className="icon p-4 rounded-s-md">

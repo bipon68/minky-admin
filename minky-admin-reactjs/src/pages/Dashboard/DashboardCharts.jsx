@@ -3,7 +3,7 @@ import React from "react";
 const DashboardCharts = () => {
   return (
     <div>
-      <div className="flex w-full gap-4 px-4">
+      <div className="flex w-full gap-6 px-6">
         <div className="w-full">
           <div className="tile">
             <h3 className="tile-title">Monthly Sales</h3>

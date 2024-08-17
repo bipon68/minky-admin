@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import { AiFillDashboard } from "react-icons/ai";
 import { FiFileText } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 function SideBar({ isSidebarOpen }) {
   const [expandedMenu, setExpandedMenu] = useState(null);
@@ -29,13 +30,13 @@ function SideBar({ isSidebarOpen }) {
       </div>
       <ul className="app-menu">
         <li>
-          <a className="app-menu__item active" href="DashboardPage">
+          <Link className="app-menu__item active" to="DashboardPage">
             <AiFillDashboard />
             <span className="app-menu__label">Dashboard</span>
-          </a>
+          </Link>
         </li>
         <li className={`treeview ${expandedMenu === 0 ? "is-expanded" : ""}`}>
-          <a
+          <Link
             className="app-menu__item"
             href="#"
             onClick={(e) => {
@@ -46,43 +47,43 @@ function SideBar({ isSidebarOpen }) {
             <FaLaptop />
             <span className="app-menu__label">UI Elements</span>
             <FaAngleRight />
-          </a>
+          </Link>
           <ul className={`treeview-menu ${expandedMenu === 0 ? "show" : ""}`}>
             <li>
-              <a className="treeview-item" href="tailwind-components.html">
+              <Link className="treeview-item" to="tailwindElements">
                 <FaCircle /> Tailwind Elements
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 className="treeview-item"
                 href="https://fontawesome.com/v4.7.0/icons/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaCircle /> Font Icons
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="treeview-item" href="ui-cards.html">
+              <Link className="treeview-item" href="ui-cards.html">
                 <FaCircle /> Cards
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="treeview-item" href="widgets.html">
+              <Link className="treeview-item" href="widgets.html">
                 <FaCircle /> Widgets
-              </a>
+              </Link>
             </li>
           </ul>
         </li>
         <li>
-          <a className="app-menu__item" href="charts.html">
+          <Link className="app-menu__item" href="charts.html">
             <FaChartPie />
             <span className="app-menu__label">Charts</span>
-          </a>
+          </Link>
         </li>
         <li className={`treeview ${expandedMenu === 1 ? "is-expanded" : ""}`}>
-          <a
+          <Link
             className="app-menu__item"
             href="#"
             onClick={(e) => {
@@ -93,32 +94,32 @@ function SideBar({ isSidebarOpen }) {
             <FaEdit />
             <span className="app-menu__label">Forms</span>
             <FaAngleRight />
-          </a>
+          </Link>
           <ul className={`treeview-menu ${expandedMenu === 1 ? "show" : ""}`}>
             <li>
-              <a className="treeview-item" href="form-components.html">
+              <Link className="treeview-item" href="form-components.html">
                 <FaCircle /> Form Components
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="treeview-item" href="form-custom.html">
+              <Link className="treeview-item" href="form-custom.html">
                 <FaCircle /> Custom Components
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="treeview-item" href="form-samples.html">
+              <Link className="treeview-item" href="form-samples.html">
                 <FaCircle /> Form Samples
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="treeview-item" href="form-notifications.html">
+              <Link className="treeview-item" href="form-notifications.html">
                 <FaCircle /> Form Notifications
-              </a>
+              </Link>
             </li>
           </ul>
         </li>
         <li className={`treeview ${expandedMenu === 2 ? "is-expanded" : ""}`}>
-          <a
+          <Link
             className="app-menu__item"
             href="#"
             onClick={(e) => {
@@ -129,22 +130,22 @@ function SideBar({ isSidebarOpen }) {
             <FaList />
             <span className="app-menu__label">Tables</span>
             <FaAngleRight />
-          </a>
+          </Link>
           <ul className={`treeview-menu ${expandedMenu === 2 ? "show" : ""}`}>
             <li>
-              <a className="treeview-item" href="table-basic.html">
+              <Link className="treeview-item" href="table-basic.html">
                 <FaCircle /> Basic Tables
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="treeview-item" href="table-data-table.html">
+              <Link className="treeview-item" href="table-data-table.html">
                 <FaCircle /> Data Tables
-              </a>
+              </Link>
             </li>
           </ul>
         </li>
         <li className={`treeview ${expandedMenu === 3 ? "is-expanded" : ""}`}>
-          <a
+          <Link
             className="app-menu__item"
             href="#"
             onClick={(e) => {
@@ -155,47 +156,47 @@ function SideBar({ isSidebarOpen }) {
             <FiFileText />
             <span className="app-menu__label">Pages</span>
             <FaAngleRight />
-          </a>
+          </Link>
           <ul className={`treeview-menu ${expandedMenu === 3 ? "show" : ""}`}>
             <li>
-              <a className="treeview-item" href="blank-page.html">
+              <Link className="treeview-item" href="blank-page.html">
                 <FaCircle /> Blank Page
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="treeview-item" href="page-login.html">
+              <Link className="treeview-item" href="page-login.html">
                 <FaCircle /> Login Page
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="treeview-item" href="page-lockscreen.html">
+              <Link className="treeview-item" href="page-lockscreen.html">
                 <FaCircle /> Lockscreen Page
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="treeview-item" href="page-user.html">
+              <Link className="treeview-item" href="page-user.html">
                 <FaCircle /> User Page
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="treeview-item" href="page-invoice.html">
+              <Link className="treeview-item" href="page-invoice.html">
                 <FaCircle /> Invoice Page
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="treeview-item" href="page-calendar.html">
+              <Link className="treeview-item" href="page-calendar.html">
                 <FaCircle /> Calendar Page
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="treeview-item" href="page-mailbox.html">
+              <Link className="treeview-item" href="page-mailbox.html">
                 <FaCircle /> Mailbox
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="treeview-item" href="page-error.html">
+              <Link className="treeview-item" href="page-error.html">
                 <FaCircle /> Error Page
-              </a>
+              </Link>
             </li>
           </ul>
         </li>
