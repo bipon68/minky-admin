@@ -2,13 +2,7 @@ import React from "react";
 import DashboardPage from "./Dashboard/DashboardPage";
 
 const HomePage = () => {
-  return (
-    <div className="mt-7 ml-56">
-      <div className="">
-        <DashboardPage />
-      </div>
-    </div>
-  );
+  return <div className="mt-14 ml-56"></div>;
 };
 
 export default HomePage;

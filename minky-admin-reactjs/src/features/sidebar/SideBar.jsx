@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import userphoto from "../../assests/img/profile.jpg";
 import {
   FaAngleRight,
   FaChartPie,
@@ -20,11 +21,7 @@ function SideBar({ isSidebarOpen }) {
   return (
     <aside className={`app-sidebar ${isSidebarOpen ? "sidenav-toggled" : ""}`}>
       <div className="app-sidebar__user">
-        <img
-          className="size-14 rounded-full"
-          src="img/profile.jpg"
-          alt="User"
-        />
+        <img className="size-14 rounded-full" src={userphoto} alt="User" />
         <div>
           <p className="app-sidebar__user-name">John Doe</p>
           <p className="app-sidebar__user-designation">Frontend Developer</p>
@@ -32,7 +29,7 @@ function SideBar({ isSidebarOpen }) {
       </div>
       <ul className="app-menu">
         <li>
-          <a className="app-menu__item active" href="index.html">
+          <a className="app-menu__item active" href="DashboardPage">
             <AiFillDashboard />
             <span className="app-menu__label">Dashboard</span>
           </a>
