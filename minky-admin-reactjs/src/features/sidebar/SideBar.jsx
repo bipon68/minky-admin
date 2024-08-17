@@ -18,7 +18,7 @@ function SideBar() {
         </div>
         <ul className="app-menu">
           <li>
-            <a className="app-menu__item active" href="index.html">
+            <a className="app-menu__item active" href="/DashboardPage">
               <i className="app-menu__icon fa fa-dashboard"></i>
               <span className="app-menu__label">Dashboard</span>
             </a>
