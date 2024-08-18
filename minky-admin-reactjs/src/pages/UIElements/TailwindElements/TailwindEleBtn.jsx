@@ -204,11 +204,8 @@ const TailwindEleBtn = () => {
           </div>
           <div className=" w-full">
             <div class=" grid gap-2">
-              <p class="bs-component pb-1">
-                <button
-                  class="btn btn-primary text-2xl btn-block"
-                  type="button"
-                >
+              <p class="bs-component text-4xl pb-1">
+                <button class="btn btn-primary  btn-block " type="button">
                   Block level button
                 </button>
               </p>
