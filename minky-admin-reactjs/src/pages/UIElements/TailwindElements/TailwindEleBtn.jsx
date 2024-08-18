@@ -203,7 +203,7 @@ const TailwindEleBtn = () => {
             </div>
           </div>
           <div className=" w-full">
-            <div class="col-lg-5">
+            <div class=" grid gap-2">
               <p class="bs-component pb-1">
                 <button
                   class="btn btn-primary text-2xl btn-block"
@@ -260,7 +260,7 @@ const TailwindEleBtn = () => {
               </div>
               <div class="bs-component">
                 <div
-                  class="btn-group-vertical grid w-full"
+                  class=" btn-group-vertical grid w-fit"
                   data-toggle="buttons"
                 >
                   <button class="btn btn-primary" type="button">
