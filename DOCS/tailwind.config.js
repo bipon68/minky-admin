@@ -9,13 +9,15 @@ module.exports = {
       xl: "1440px",
     },
     colors: {
-      blue: "#1fb6ff",
-      pink: "#ff49db",
-      orange: "#ff7849",
-      green: "#13ce66",
-      "gray-dark": "#273444",
-      gray: "#8492a6",
-      "gray-light": "#d3dce6",
+      primary: "#3490dc", // Blue
+      secondary: "#ffed4a", // Yellow
+      success: "#38c172", // Green
+      danger: "#e3342f", // Red
+      warning: "#f6993f", // Orange
+      info: "#6cb2eb", // Light Blue
+      light: "#f8f9fa", // Light Gray
+      dark: "#343a40", // Dark Gray
+      custom: "#009688",
     },
     fontFamily: {
       sans: ["Graphik", "sans-serif"],
