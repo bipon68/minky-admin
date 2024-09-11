@@ -12235,24 +12235,13 @@ be a descendant of the grid when it is being dragged.
   fixed left-0 right-0 top-0 w-full flex bg-custom-teal z-1030 pr-4
 }
 
-@media (min-width: 768px) {
-  .app-header {
-    padding-right: 30px;
-  }
-}
-
-
 .app-header__logo {
   flex-1 text-white text-center font-niconne px-4 text-26px font-normal leading-50px
 }
 
-
-
-
 .app-sidebar__toggle {
   transition-colors duration-300 ease-in-out
 }
-
 
 .app-nav {
   flex justify-end mb-0
@@ -12389,7 +12378,6 @@ be a descendant of the grid when it is being dragged.
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
-
 .dropdown-menu {
   border-radius: 0;
   -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
@@ -12433,26 +12421,8 @@ be a descendant of the grid when it is being dragged.
 }
 
 .app-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  background-color: #fff;
-  margin: -30px -30px 30px;
-  padding: 20px 30px;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  flex items-center justify-between flex-row bg-white mx-[-30px] my-[-30px] mb-[30px] p-[20px_30px] shadow-sm
 }
-
 
 .app-title h1 {
   margin: 0;
@@ -13296,15 +13266,6 @@ be a descendant of the grid when it is being dragged.
   transform: rotateY(0deg);
 }
 
-@media (max-width: 351px) {
-  .login-content .login-box {
-    min-width: 100%;
-  }
-  .login-content .login-box .login-form,
-  .login-content .login-box .forget-form {
-    width: 100%;
-  }
-}
 
 .lockscreen-content {
   display: -webkit-box;
