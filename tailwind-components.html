@@ -209,214 +209,231 @@
     <!-- Sidebar menu-->
     <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
     <aside
-      class="fixed top-[50px] bottom-0 left-0 pt-17.5 w-[230px] overflow-auto z-10 bg-dark shadow-lg transition-all duration-300 ease-in-out"
+      class="app-sidebar fixed top-[50px] bottom-0 left-0 pt-17.5 w-[230px] overflow-auto z-10 bg-dark shadow-lg transition-all duration-300 ease-in-out"
     >
-      <div class="flex items-center p-2.5 mb-5 text-white">
+      <div
+        class="app-sidebar__user flex items-center gap-2 p-2.5 mb-2 text-white"
+      >
         <img
-          class="size-14 rounded-full"
+          class="rounded-full size-14"
           src="img/profile.jpg"
           alt="User Image"
         />
         <div>
-          <p class="text-[17px] leading-[1.3]">John Doe</p>
-          <p class="whitespace-nowrap overflow-hidden truncate mb-0">
+          <p
+            class="mb-0 overflow-hidden truncate app-sidebar__user-name whitespace-nowrap"
+          >
+            John Doe
+          </p>
+          <p
+            class="mb-0 overflow-hidden truncate app-sidebar__user-designation whitespace-nowrap"
+          >
             Frontend Developer
           </p>
         </div>
       </div>
-      <ul class="mb-0 pb-10">
+      <ul class="pb-10 mb-0 app-menu">
+        <!-- Dashboard -->
         <li>
           <a
-            class="relative flex items-center py-3 px-4 text-[1.08em] border-l-3 border-transparent transition-colors duration-300 ease-in-out text-white"
+            class="app-menu__item relative flex items-center py-3 px-4 text-[1.08em] border-l-3 border-transparent transition-colors duration-300 ease-in-out text-white active"
             href="index.html"
-            ><i class="flex-none w-[25px] fa fa-dashboard"></i
-            ><span class="whitespace-nowrap flex-1">Dashboard</span></a
+            ><i class="app-menu__icon flex-none w-[25px] fa fa-dashboard"></i
+            ><span class="app-menu__label">Dashboard</span></a
           >
         </li>
-        <li
-          class="transition-transform duration-300 ease-in-out {{ isExpanded ? 'rotate-90' : 'rotate-0' }}"
-        >
+        <!-- UI Elements -->
+        <li class="treeview">
           <a
             class="relative flex items-center py-3 px-4 text-[1.08em] border-l-3 border-transparent transition-colors duration-300 ease-in-out text-white"
             href="#"
             data-toggle="treeview"
-            ><i class="flex-none w-[25px] fa fa-laptop"></i
-            ><span class="whitespace-nowrap flex-1">UI Elements</span
+            ><i class="app-menu__icon flex-none w-[25px] fa fa-laptop"></i
+            ><span class="flex-1 app-menu__label whitespace-nowrap"
+              >UI Elements</span
             ><i class="treeview-indicator fa fa-angle-right"></i
           ></a>
-          <ul class="treeview-menu">
+          <ul
+            class="treeview-menu max-h-0 overflow-hidden transition-max-height duration-300 ease-in-out bg-[#2a383e]"
+          >
             <li>
               <a
-                class="flex items-center py-1.5 px-5 text-base text-white treeview-item active hover:bg-[#0d1214] focus:bg-[#0d1214] focus:text-white active"
+                class="flex items-center py-1.5 px-5 text-base text-white"
                 href="tailwind-components.html"
-                ><i class="icon fa fa-circle"></i> Tailwins Elements</a
+                ><i class="icon fa fa-circle"></i> Tailwind Elements</a
               >
             </li>
             <li>
               <a
-                class="flex items-center py-1.5 px-5 text-base text-white treeview-item active hover:bg-[#0d1214] focus:bg-[#0d1214] focus:text-white"
+                class="flex items-center py-1.5 px-5 text-base text-white"
                 href="https://fontawesome.com/v4.7.0/icons/"
                 target="_blank"
                 rel="noopener"
-                ><i class="icon fa fa-circle"></i> Font Icons</a
+                ><i class="icon fa fa-circles"></i> Font Icons</a
               >
             </li>
             <li>
               <a
-                class="flex items-center py-1.5 px-5 text-base text-white treeview-item active hover:bg-[#0d1214] focus:bg-[#0d1214] focus:text-white"
+                class="flex items-center py-1.5 px-5 text-base text-white"
                 href="ui-cards.html"
                 ><i class="icon fa fa-circle"></i> Cards</a
               >
             </li>
             <li>
               <a
-                class="flex items-center py-1.5 px-5 text-base text-white treeview-item active hover:bg-[#0d1214] focus:bg-[#0d1214] focus:text-white"
+                class="flex items-center py-1.5 px-5 text-base text-white"
                 href="widgets.html"
                 ><i class="icon fa fa-circle"></i> Widgets</a
               >
             </li>
           </ul>
         </li>
+        <!-- Charts -->
         <li>
           <a
-            class="relative flex items-center py-3 px-4 text-[1.08em] border-l-3 border-transparent transition-colors duration-300 ease-in-out text-white"
+            class="app-menu__item relative flex items-center py-3 px-4 text-[1.08em] border-l-3 border-transparent transition-colors duration-300 ease-in-out text-white"
             href="charts.html"
-            ><i class="flex-none w-[25px] fa fa-pie-chart"></i
-            ><span class="whitespace-nowrap flex-1">Charts</span></a
+            ><i class="app-menu__icon flex-none w-[25px] fa fa-pie-chart"></i
+            ><span class="app-menu__label">Charts</span></a
           >
         </li>
-        <li
-          class="transition-transform duration-300 ease-in-out {{ isExpanded ? 'rotate-90' : 'rotate-0' }}"
-        >
+        <!-- Forms -->
+        <li class="treeview">
           <a
-            class="relative flex items-center py-3 px-4 text-[1.08em] border-l-3 border-transparent transition-colors duration-300 ease-in-out text-white"
+            class="app-menu__item relative flex items-center py-3 px-4 text-[1.08em] border-l-3 border-transparent transition-colors duration-300 ease-in-out text-white"
             href="#"
             data-toggle="treeview"
-            ><i class="flex-none w-[25px] fa fa-edit"></i
-            ><span class="whitespace-nowrap flex-1">Forms</span
+            ><i class="app-menu__icon flex-none w-[25px] fa fa-edit"></i
+            ><span class="flex-1 app-menu__label whitespace-nowrap">Forms</span
             ><i class="treeview-indicator fa fa-angle-right"></i
           ></a>
-          <ul class="treeview-menu">
+          <ul
+            class="treeview-menu max-h-0 overflow-hidden transition-max-height duration-300 ease-in-out bg-[#2a383e]"
+          >
             <li>
               <a
-                class="flex items-center py-1.5 px-5 text-base text-white treeview-item active hover:bg-[#0d1214] focus:bg-[#0d1214] focus:text-white"
+                class="treeview-item flex items-center py-1.5 px-5 text-base text-white"
                 href="form-components.html"
                 ><i class="icon fa fa-circle"></i> Form Components</a
               >
             </li>
             <li>
               <a
-                class="flex items-center py-1.5 px-5 text-base text-white treeview-item active hover:bg-[#0d1214] focus:bg-[#0d1214] focus:text-white"
+                class="treeview-item flex items-center py-1.5 px-5 text-base text-white"
                 href="form-custom.html"
                 ><i class="icon fa fa-circle"></i> Custom Components</a
               >
             </li>
             <li>
               <a
-                class="flex items-center py-1.5 px-5 text-base text-white treeview-item active hover:bg-[#0d1214] focus:bg-[#0d1214] focus:text-white"
+                class="treeview-item flex items-center py-1.5 px-5 text-base text-white"
                 href="form-samples.html"
                 ><i class="icon fa fa-circle"></i> Form Samples</a
               >
             </li>
             <li>
               <a
-                class="flex items-center py-1.5 px-5 text-base text-white treeview-item active hover:bg-[#0d1214] focus:bg-[#0d1214] focus:text-white"
+                class="treeview-item flex items-center py-1.5 px-5 text-base text-white"
                 href="form-notifications.html"
                 ><i class="icon fa fa-circle"></i> Form Notifications</a
               >
             </li>
           </ul>
         </li>
-        <li
-          class="transition-transform duration-300 ease-in-out {{ isExpanded ? 'rotate-90' : 'rotate-0' }}"
-        >
+        <!-- Tables-->
+        <li class="treeview">
           <a
-            class="relative flex items-center py-3 px-4 text-[1.08em] border-l-3 border-transparent transition-colors duration-300 ease-in-out text-white"
+            class="app-menu__item relative flex items-center py-3 px-4 text-[1.08em] border-l-3 border-transparent transition-colors duration-300 ease-in-out text-white"
             href="#"
             data-toggle="treeview"
-            ><i class="flex-none w-[25px] fa fa-th-list"></i
-            ><span class="whitespace-nowrap flex-1">Tables</span
+            ><i class="app-menu__icon flex-none w-[25px] fa fa-edit"></i
+            ><span class="flex-1 app-menu__label whitespace-nowrap">Tables</span
             ><i class="treeview-indicator fa fa-angle-right"></i
           ></a>
-          <ul class="treeview-menu">
+          <ul
+            class="treeview-menu max-h-0 overflow-hidden transition-max-height duration-300 ease-in-out bg-[#2a383e]"
+          >
             <li>
               <a
-                class="flex items-center py-1.5 px-5 text-base text-white treeview-item active hover:bg-[#0d1214] focus:bg-[#0d1214] focus:text-white"
-                href="table-basic.html"
+                class="treeview-item flex items-center py-1.5 px-5 text-base text-white"
+                href="form-components.html"
                 ><i class="icon fa fa-circle"></i> Basic Tables</a
               >
             </li>
             <li>
               <a
-                class="flex items-center py-1.5 px-5 text-base text-white treeview-item active hover:bg-[#0d1214] focus:bg-[#0d1214] focus:text-white"
-                href="table-data-table.html"
-                ><i class="icon fa fa-circle"></i> Data Tables</a
+                class="treeview-item flex items-center py-1.5 px-5 text-base text-white"
+                href="form-custom.html"
+                ><i class="icon fa fa-circle"></i>Data Tables</a
               >
             </li>
           </ul>
         </li>
         <li class="treeview">
           <a
-            class="relative flex items-center py-3 px-4 text-[1.08em] border-l-3 border-transparent transition-colors duration-300 ease-in-out text-white"
+            class="app-menu__item relative flex items-center py-3 px-4 text-[1.08em] border-l-3 border-transparent transition-colors duration-300 ease-in-out text-white"
             href="#"
             data-toggle="treeview"
-            ><i class="flex-none w-[25px] fa fa-file-text"></i
-            ><span class="whitespace-nowrap flex-1">Pages</span
+            ><i class="app-menu__icon flex-none w-[25px] fa fa-file-text"></i
+            ><span class="flex-1 app-menu__label whitespace-nowrap">Pages</span
             ><i class="treeview-indicator fa fa-angle-right"></i
           ></a>
-          <ul class="treeview-menu">
+          <ul
+            class="treeview-menu max-h-0 overflow-hidden transition-max-height duration-300 ease-in-out bg-[#2a383e]"
+          >
             <li>
               <a
-                class="flex items-center py-1.5 px-5 text-base text-white treeview-item active hover:bg-[#0d1214] focus:bg-[#0d1214] focus:text-white"
-                href="blank-page.html"
-                ><i class="icon fa fa-circle"></i> Blank Page</a
+                class="treeview-item flex items-center py-1.5 px-5 text-base text-white"
+                href="form-components.html"
+                ><i class="icon fa fa-circle"></i>Blank Page</a
               >
             </li>
             <li>
               <a
-                class="flex items-center py-1.5 px-5 text-base text-white treeview-item active hover:bg-[#0d1214] focus:bg-[#0d1214] focus:text-white"
-                href="page-login.html"
-                ><i class="icon fa fa-circle"></i> Login Page</a
+                class="treeview-item flex items-center py-1.5 px-5 text-base text-white"
+                href="form-custom.html"
+                ><i class="icon fa fa-circle"></i>Login Page</a
               >
             </li>
             <li>
               <a
-                class="flex items-center py-1.5 px-5 text-base text-white treeview-item active hover:bg-[#0d1214] focus:bg-[#0d1214] focus:text-white"
+                class="treeview-item flex items-center py-1.5 px-5 text-base text-white"
                 href="page-lockscreen.html"
-                ><i class="icon fa fa-circle"></i> Lockscreen Page</a
+              >
+                <i class="icon fa fa-circle"></i> Lockscreen Page</a
               >
             </li>
             <li>
               <a
-                class="flex items-center py-1.5 px-5 text-base text-white treeview-item active hover:bg-[#0d1214] focus:bg-[#0d1214] focus:text-white"
+                class="treeview-item flex items-center py-1.5 px-5 text-base text-white"
                 href="page-user.html"
                 ><i class="icon fa fa-circle"></i> User Page</a
               >
             </li>
             <li>
               <a
-                class="flex items-center py-1.5 px-5 text-base text-white treeview-item active hover:bg-[#0d1214] focus:bg-[#0d1214] focus:text-white"
+                class="treeview-item flex items-center py-1.5 px-5 text-base text-white"
                 href="page-invoice.html"
                 ><i class="icon fa fa-circle"></i> Invoice Page</a
               >
             </li>
             <li>
               <a
-                class="flex items-center py-1.5 px-5 text-base text-white treeview-item active hover:bg-[#0d1214] focus:bg-[#0d1214] focus:text-white"
+                class="treeview-item flex items-center py-1.5 px-5 text-base text-white"
                 href="page-calendar.html"
                 ><i class="icon fa fa-circle"></i> Calendar Page</a
               >
             </li>
             <li>
               <a
-                class="flex items-center py-1.5 px-5 text-base text-white treeview-item active hover:bg-[#0d1214] focus:bg-[#0d1214] focus:text-white"
+                class="treeview-item flex items-center py-1.5 px-5 text-base text-white"
                 href="page-mailbox.html"
                 ><i class="icon fa fa-circle"></i> Mailbox</a
               >
             </li>
             <li>
               <a
-                class="flex items-center py-1.5 px-5 text-base text-white treeview-item active hover:bg-[#0d1214] focus:bg-[#0d1214] focus:text-white"
+                class="treeview-item flex items-center py-1.5 px-5 text-base text-white"
                 href="page-error.html"
                 ><i class="icon fa fa-circle"></i> Error Page</a
               >
@@ -457,12 +474,14 @@
         <div class="page-header">
           <div class="flex flex-wrap -mr-4 -ml-4">
             <div class="flex w-full">
-              <h2 class="mb-3 line-head" id="buttons">Buttons</h2>
+              <h2 class="mb-3 text-3xl font-medium line-head" id="buttons">
+                Buttons
+              </h2>
             </div>
           </div>
         </div>
         <div class="flex flex-wrap -mr-4 -ml-4">
-          <div class="flex w-7/12">
+          <div class="w-7/12">
             <p class="bs-component pb-1">
               <button
                 class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none focus:shadow-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none text-white bg-teal-600 border-teal-600 hover:bg-teal-700 hover:border-teal-700 active:bg-teal-700 active:border-teal-800"
@@ -500,46 +519,51 @@
               >
                 Danger
               </button>
-              <button class="btn btn-link" type="button">Link</button>
+              <button
+                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-link"
+                type="button"
+              >
+                Link
+              </button>
             </p>
             <p class="bs-component pb-1">
               <button
-                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none focus:shadow-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-primary"
+                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none focus:shadow-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none text-white bg-teal-600 border-teal-600 hover:bg-teal-700 hover:border-teal-700 active:bg-teal-700 active:border-teal-800"
                 type="button"
                 disabled=""
               >
                 Primary
               </button>
               <button
-                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none focus:shadow-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-secondary"
+                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none focus:shadow-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none text-white bg-gray-600 border-gray-600 hover:bg-gray-700 hover:border-gray-700 active:bg-gray-700 active:border-gray-800"
                 type="button"
                 disabled=""
               >
                 Secondary
               </button>
               <button
-                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none focus:shadow-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-success"
+                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none focus:shadow-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none text-white bg-green-600 border-green-600 hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-800"
                 type="button"
                 disabled=""
               >
                 Success
               </button>
               <button
-                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none focus:shadow-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-info"
+                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none focus:shadow-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none text-white bg-cyan-600 border-cyan-600 hover:bg-cyan-700 hover:border-cyan-700 active:bg-cyan-700 active:border-cyan-800"
                 type="button"
                 disabled=""
               >
                 Info
               </button>
               <button
-                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none focus:shadow-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-warning"
+                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none focus:shadow-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none text-gray-900 bg-yellow-500 border-yellow-500 hover:bg-yellow-600 hover:border-yellow-600 active:bg-yellow-700 active:border-yellow-700"
                 type="button"
                 disabled=""
               >
                 Warning
               </button>
               <button
-                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none focus:shadow-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-danger"
+                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none focus:shadow-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none text-white bg-red-600 border-red-600 hover:bg-red-700 hover:border-red-700 active:bg-red-700 active:border-red-800"
                 type="button"
                 disabled=""
               >
@@ -555,13 +579,13 @@
             </p>
             <p class="bs-component pb-1">
               <button
-                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none focus:shadow-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-outline-primary"
+                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none active:bg-none text-teal-600 border-teal-600 bg-transparent hover:text-white hover:bg-teal-600 border-teal-600 active:text-white active:bg-teal-600 active:border-teal-600"
                 type="button"
               >
                 Primary
               </button>
               <button
-                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none focus:shadow-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-outline-secondary"
+                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-gray-600 border-2 rounded transition duration-300 ease-in-out hover:text-white hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none focus:shadow-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none border-gray-600 hover:bg-gray-700"
                 type="button"
               >
                 Secondary
@@ -597,10 +621,15 @@
                 role="group"
                 aria-label="Button group with nested dropdown"
               >
-                <button class="btn btn-primary" type="button">Primary</button>
+                <button
+                  class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-primary"
+                  type="button"
+                >
+                  Primary
+                </button>
                 <div class="btn-group" role="group">
                   <button
-                    class="btn btn-primary dropdown-toggle"
+                    class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-primary dropdown-toggle"
                     id="btnGroupDrop1"
                     type="button"
                     data-toggle="dropdown"
@@ -618,10 +647,15 @@
                 role="group"
                 aria-label="Button group with nested dropdown"
               >
-                <button class="btn btn-success" type="button">Success</button>
+                <button
+                  class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-success"
+                  type="button"
+                >
+                  Success
+                </button>
                 <div class="btn-group" role="group">
                   <button
-                    class="btn btn-success dropdown-toggle"
+                    class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-success dropdown-toggle"
                     id="btnGroupDrop2"
                     type="button"
                     data-toggle="dropdown"
@@ -639,10 +673,15 @@
                 role="group"
                 aria-label="Button group with nested dropdown"
               >
-                <button class="btn btn-info" type="button">Info</button>
+                <button
+                  class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-info"
+                  type="button"
+                >
+                  Info
+                </button>
                 <div class="btn-group" role="group">
                   <button
-                    class="btn btn-info dropdown-toggle"
+                    class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-info dropdown-toggle"
                     id="btnGroupDrop3"
                     type="button"
                     data-toggle="dropdown"
@@ -660,10 +699,15 @@
                 role="group"
                 aria-label="Button group with nested dropdown"
               >
-                <button class="btn btn-danger" type="button">Danger</button>
+                <button
+                  class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-danger"
+                  type="button"
+                >
+                  Danger
+                </button>
                 <div class="btn-group" role="group">
                   <button
-                    class="btn btn-danger dropdown-toggle"
+                    class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-danger dropdown-toggle"
                     id="btnGroupDrop4"
                     type="button"
                     data-toggle="dropdown"
@@ -678,32 +722,50 @@
               </div>
             </div>
             <div class="bs-component">
-              <button class="btn btn-primary btn-lg" type="button">
+              <button
+                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-primary btn-lg"
+                type="button"
+              >
                 Large button
               </button>
-              <button class="btn btn-primary" type="button">
+              <button
+                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-primary"
+                type="button"
+              >
                 Default button
               </button>
-              <button class="btn btn-primary btn-sm" type="button">
+              <button
+                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-primary btn-sm"
+                type="button"
+              >
                 Small button
               </button>
             </div>
           </div>
           <div class="col-lg-5">
             <p class="bs-component pb-1">
-              <button class="btn btn-primary text-2xl btn-block" type="button">
+              <button
+                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-primary btn-block"
+                type="button"
+              >
                 Block level button
               </button>
             </p>
             <div class="bs-component" style="margin-bottom: 15px">
               <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-primary active">
+                <label
+                  class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-primary active"
+                >
                   <input type="checkbox" checked="" autocomplete="off" /> Active
                 </label>
-                <label class="btn btn-primary">
+                <label
+                  class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-primary"
+                >
                   <input type="checkbox" autocomplete="off" /> Check
                 </label>
-                <label class="btn btn-primary">
+                <label
+                  class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-primary"
+                >
                   <input type="checkbox" autocomplete="off" /> Check
                 </label>
               </div>
@@ -742,12 +804,42 @@
             </div>
             <div class="bs-component" style="margin-bottom: 15px">
               <div class="btn-group-vertical" data-toggle="buttons">
-                <button class="btn btn-primary" type="button">Button</button>
-                <button class="btn btn-primary" type="button">Button</button>
-                <button class="btn btn-primary" type="button">Button</button>
-                <button class="btn btn-primary" type="button">Button</button>
-                <button class="btn btn-primary" type="button">Button</button>
-                <button class="btn btn-primary" type="button">Button</button>
+                <button
+                  class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-primary"
+                  type="button"
+                >
+                  Button
+                </button>
+                <button
+                  class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-primary"
+                  type="button"
+                >
+                  Button
+                </button>
+                <button
+                  class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-primary"
+                  type="button"
+                >
+                  Button
+                </button>
+                <button
+                  class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-primary"
+                  type="button"
+                >
+                  Button
+                </button>
+                <button
+                  class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-primary"
+                  type="button"
+                >
+                  Button
+                </button>
+                <button
+                  class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none btn-primary"
+                  type="button"
+                >
+                  Button
+                </button>
               </div>
             </div>
             <div class="bs-component" style="margin-bottom: 15px">
@@ -1933,6 +2025,34 @@
         ga("create", "UA-72504830-1", "auto");
         ga("send", "pageview");
       }
+    </script>
+    <script>
+      // Select all elements with data-toggle="treeview"
+      document
+        .querySelectorAll('a[data-toggle="treeview"]')
+        .forEach((toggle) => {
+          toggle.addEventListener("click", function (e) {
+            e.preventDefault(); // Prevent the default link behavior
+
+            // Toggle the menu (ul element) associated with the clicked link
+            const treeviewMenu = this.nextElementSibling;
+
+            if (treeviewMenu.classList.contains("max-h-0")) {
+              // If the menu is collapsed, expand it
+              treeviewMenu.classList.remove("max-h-0");
+              treeviewMenu.classList.add("max-h-[500px]"); // You can adjust this height based on content size
+            } else {
+              // If the menu is expanded, collapse it
+              treeviewMenu.classList.remove("max-h-[500px]");
+              treeviewMenu.classList.add("max-h-0");
+            }
+
+            // Optionally, you can also rotate the indicator arrow
+            const indicator = this.querySelector(".treeview-indicator");
+            indicator.classList.toggle("fa-angle-right");
+            indicator.classList.toggle("fa-angle-down");
+          });
+        });
     </script>
   </body>
 </html>
