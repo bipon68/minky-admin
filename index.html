@@ -34,14 +34,15 @@
         href="index.html"
         >Minky</a
       >
-      <!-- Sidebar toggle button--><a
-        class="app-sidebar__toggle transition-colors duration-300 ease-in-out"
+      <!-- Sidebar toggle button-->
+      <a
+        class="transition-colors duration-300 ease-in-out app-sidebar__toggle"
         href="#"
         data-toggle="sidebar"
         aria-label="Hide Sidebar"
       ></a>
       <!-- Navbar Right Menu-->
-      <ul class="app-nav flex justify-end mb-0">
+      <ul class="flex justify-end mb-0 app-nav">
         <li class="app-search relative flex self-center mr-4 py-2.5">
           <input
             class="app-search__input border-0 py-1 px-7.5 rounded-2px bg-rgba-white-80 transition-colors duration-300 ease-in-out"
@@ -57,7 +58,7 @@
         <!--Notification Menu-->
         <li class="dropdown">
           <a
-            class="block p-4 leading-20px text-white transition-colors duration-300 ease-in-out"
+            class="block p-4 text-white transition-colors duration-300 ease-in-out leading-20px"
             href="#"
             data-toggle="dropdown"
             aria-label="Show notifications"
@@ -65,14 +66,14 @@
           ></a>
           <ul class="w-[270px] dropdown-menu dropdown-menu-right">
             <li
-              class="w-full flex py-2 px-1 justify-center text-center bg-custom-teal text-gray-800"
+              class="flex justify-center w-full px-1 py-2 text-center text-gray-800 bg-custom-teal"
             >
               You have 4 new notifications.
             </li>
-            <div class="px-2 max-h-220 overflow-y-auto">
+            <div class="px-2 overflow-y-auto max-h-220">
               <li>
                 <a
-                  class="flex items-center py-2 text-inherit border-b border-gray-300 transition-colors duration-300 ease-in-out"
+                  class="flex items-center py-2 transition-colors duration-300 ease-in-out border-b border-gray-300 text-inherit"
                   href="javascript:;"
                   ><span class="pr-2.5"
                     ><span class="fa-stack fa-lg"
@@ -89,7 +90,7 @@
               </li>
               <li>
                 <a
-                  class="flex items-center py-2 text-inherit border-b border-gray-300 transition-colors duration-300 ease-in-out"
+                  class="flex items-center py-2 transition-colors duration-300 ease-in-out border-b border-gray-300 text-inherit"
                   href="javascript:;"
                   ><span class="pr-2.5"
                     ><span class="fa-stack fa-lg"
@@ -104,7 +105,7 @@
               </li>
               <li>
                 <a
-                  class="flex items-center py-2 text-inherit border-b border-gray-300 transition-colors duration-300 ease-in-out"
+                  class="flex items-center py-2 transition-colors duration-300 ease-in-out border-b border-gray-300 text-inherit"
                   href="javascript:;"
                   ><span class="pr-2.5"
                     ><span class="fa-stack fa-lg"
@@ -120,7 +121,7 @@
               <div class="">
                 <li>
                   <a
-                    class="flex items-center py-2 text-inherit border-b border-gray-300 transition-colors duration-300 ease-in-out"
+                    class="flex items-center py-2 transition-colors duration-300 ease-in-out border-b border-gray-300 text-inherit"
                     href="javascript:;"
                     ><span class="pr-2.5"
                       ><span class="fa-stack fa-lg"
@@ -137,7 +138,7 @@
                 </li>
                 <li>
                   <a
-                    class="flex items-center py-2 text-inherit border-b border-gray-300 transition-colors duration-300 ease-in-out"
+                    class="flex items-center py-2 transition-colors duration-300 ease-in-out border-b border-gray-300 text-inherit"
                     href="javascript:;"
                     ><span class="pr-2.5"
                       ><span class="fa-stack fa-lg"
@@ -154,7 +155,7 @@
                 </li>
                 <li>
                   <a
-                    class="flex items-center py-2 text-inherit border-b border-gray-300 transition-colors duration-300 ease-in-out"
+                    class="flex items-center py-2 transition-colors duration-300 ease-in-out border-b border-gray-300 text-inherit"
                     href="javascript:;"
                     ><span class="pr-2.5"
                       ><span class="fa-stack fa-lg"
@@ -171,7 +172,7 @@
                 </li>
               </div>
             </div>
-            <li class="py-2 px-5 text-center bg-gray-200">
+            <li class="px-5 py-2 text-center bg-gray-200">
               <a href="#">See all notifications.</a>
             </li>
           </ul>
@@ -179,7 +180,7 @@
         <!-- User Menu-->
         <li class="dropdown">
           <a
-            class="app-nav__item block p-4 leading-20px text-white transition-colors duration-300 ease-in-out"
+            class="block p-4 text-white transition-colors duration-300 ease-in-out app-nav__item leading-20px"
             href="#"
             data-toggle="dropdown"
             aria-label="Open Profile Menu"
@@ -214,24 +215,25 @@
         class="app-sidebar__user flex items-center gap-2 p-2.5 mb-2 text-white"
       >
         <img
-          class="size-14 rounded-full"
+          class="rounded-full size-14"
           src="img/profile.jpg"
           alt="User Image"
         />
         <div>
           <p
-            class="app-sidebar__user-name whitespace-nowrap overflow-hidden truncate mb-0"
+            class="mb-0 overflow-hidden truncate app-sidebar__user-name whitespace-nowrap"
           >
             John Doe
           </p>
           <p
-            class="app-sidebar__user-designation whitespace-nowrap overflow-hidden truncate mb-0"
+            class="mb-0 overflow-hidden truncate app-sidebar__user-designation whitespace-nowrap"
           >
             Frontend Developer
           </p>
         </div>
       </div>
-      <ul class="app-menu mb-0 pb-10">
+      <ul class="pb-10 mb-0 app-menu">
+        <!-- Dashboard -->
         <li>
           <a
             class="app-menu__item relative flex items-center py-3 px-4 text-[1.08em] border-l-3 border-transparent transition-colors duration-300 ease-in-out text-white active"
@@ -240,13 +242,14 @@
             ><span class="app-menu__label">Dashboard</span></a
           >
         </li>
+        <!-- UI Elements -->
         <li class="treeview">
           <a
             class="relative flex items-center py-3 px-4 text-[1.08em] border-l-3 border-transparent transition-colors duration-300 ease-in-out text-white"
             href="#"
             data-toggle="treeview"
             ><i class="app-menu__icon flex-none w-[25px] fa fa-laptop"></i
-            ><span class="app-menu__label whitespace-nowrap flex-1"
+            ><span class="flex-1 app-menu__label whitespace-nowrap"
               >UI Elements</span
             ><i class="treeview-indicator fa fa-angle-right"></i
           ></a>
@@ -285,6 +288,7 @@
             </li>
           </ul>
         </li>
+        <!-- Charts -->
         <li>
           <a
             class="app-menu__item relative flex items-center py-3 px-4 text-[1.08em] border-l-3 border-transparent transition-colors duration-300 ease-in-out text-white"
@@ -293,13 +297,14 @@
             ><span class="app-menu__label">Charts</span></a
           >
         </li>
+        <!-- Forms -->
         <li class="treeview">
           <a
             class="app-menu__item relative flex items-center py-3 px-4 text-[1.08em] border-l-3 border-transparent transition-colors duration-300 ease-in-out text-white"
             href="#"
             data-toggle="treeview"
             ><i class="app-menu__icon flex-none w-[25px] fa fa-edit"></i
-            ><span class="app-menu__label whitespace-nowrap flex-1">Forms</span
+            ><span class="flex-1 app-menu__label whitespace-nowrap">Forms</span
             ><i class="treeview-indicator fa fa-angle-right"></i
           ></a>
           <ul
@@ -335,28 +340,31 @@
             </li>
           </ul>
         </li>
+        <!-- Tables-->
         <li class="treeview">
           <a
             class="app-menu__item relative flex items-center py-3 px-4 text-[1.08em] border-l-3 border-transparent transition-colors duration-300 ease-in-out text-white"
             href="#"
             data-toggle="treeview"
-            ><i class="app-menu__icon flex-none w-[25px] fa fa-th-list"></i
-            ><span class="app-menu__label whitespace-nowrap flex-1">Tables</span
+            ><i class="app-menu__icon flex-none w-[25px] fa fa-edit"></i
+            ><span class="flex-1 app-menu__label whitespace-nowrap">Tables</span
             ><i class="treeview-indicator fa fa-angle-right"></i
           ></a>
-          <ul class="treeview-menu">
+          <ul
+            class="treeview-menu max-h-0 overflow-hidden transition-max-height duration-300 ease-in-out bg-[#2a383e]"
+          >
             <li>
               <a
                 class="treeview-item flex items-center py-1.5 px-5 text-base text-white"
-                href="table-basic.html"
+                href="form-components.html"
                 ><i class="icon fa fa-circle"></i> Basic Tables</a
               >
             </li>
             <li>
               <a
                 class="treeview-item flex items-center py-1.5 px-5 text-base text-white"
-                href="table-data-table.html"
-                ><i class="icon fa fa-circle"></i> Data Tables</a
+                href="form-custom.html"
+                ><i class="icon fa fa-circle"></i>Data Tables</a
               >
             </li>
           </ul>
@@ -367,29 +375,32 @@
             href="#"
             data-toggle="treeview"
             ><i class="app-menu__icon flex-none w-[25px] fa fa-file-text"></i
-            ><span class="app-menu__label whitespace-nowrap flex-1">Pages</span
+            ><span class="flex-1 app-menu__label whitespace-nowrap">Pages</span
             ><i class="treeview-indicator fa fa-angle-right"></i
           ></a>
-          <ul class="treeview-menu">
+          <ul
+            class="treeview-menu max-h-0 overflow-hidden transition-max-height duration-300 ease-in-out bg-[#2a383e]"
+          >
             <li>
               <a
                 class="treeview-item flex items-center py-1.5 px-5 text-base text-white"
-                href="blank-page.html"
-                ><i class="icon fa fa-circle"></i> Blank Page</a
+                href="form-components.html"
+                ><i class="icon fa fa-circle"></i>Blank Page</a
               >
             </li>
             <li>
               <a
                 class="treeview-item flex items-center py-1.5 px-5 text-base text-white"
-                href="page-login.html"
-                ><i class="icon fa fa-circle"></i> Login Page</a
+                href="form-custom.html"
+                ><i class="icon fa fa-circle"></i>Login Page</a
               >
             </li>
             <li>
               <a
                 class="treeview-item flex items-center py-1.5 px-5 text-base text-white"
                 href="page-lockscreen.html"
-                ><i class="icon fa fa-circle"></i> Lockscreen Page</a
+              >
+                <i class="icon fa fa-circle"></i> Lockscreen Page</a
               >
             </li>
             <li>
@@ -484,7 +495,7 @@
       </div>
       <div class="flex flex-wrap w-full pr-4">
         <div class="flex w-1/2">
-          <div class="tile w-full">
+          <div class="w-full tile">
             <h3 class="tile-title">Monthly Sales</h3>
             <div class="embed-responsive embed-responsive-16by9">
               <canvas class="embed-responsive-item" id="lineChartDemo"></canvas>
@@ -492,7 +503,7 @@
           </div>
         </div>
         <div class="flex w-1/2 pl-4">
-          <div class="tile w-full">
+          <div class="w-full tile">
             <h3 class="tile-title">Support Requests</h3>
             <div class="embed-responsive embed-responsive-16by9">
               <canvas class="embed-responsive-item" id="pieChartDemo"></canvas>
@@ -533,11 +544,11 @@
               about customizing the theme colors and functionality.
             </p>
             <p class="mt-4 mb-4">
-              <a class="btn btn-primary mr-2 mb-2" href="#" target="_blank"
+              <a class="mb-2 mr-2 btn btn-primary" href="#" target="_blank"
                 ><i class="fa fa-file"></i>Docs</a
-              ><a class="btn btn-info mr-2 mb-2" href="#" target="_blank"
+              ><a class="mb-2 mr-2 btn btn-info" href="#" target="_blank"
                 ><i class="fa fa-github"></i>GitHub</a
-              ><a class="btn btn-success mr-2 mb-2" href="#" target="_blank"
+              ><a class="mb-2 mr-2 btn btn-success" href="#" target="_blank"
                 ><i class="fa fa-download"></i>Download</a
               >
             </p>
@@ -649,6 +660,34 @@
         ga("create", "UA-72504830-1", "auto");
         ga("send", "pageview");
       }
+    </script>
+    <script>
+      // Select all elements with data-toggle="treeview"
+      document
+        .querySelectorAll('a[data-toggle="treeview"]')
+        .forEach((toggle) => {
+          toggle.addEventListener("click", function (e) {
+            e.preventDefault(); // Prevent the default link behavior
+
+            // Toggle the menu (ul element) associated with the clicked link
+            const treeviewMenu = this.nextElementSibling;
+
+            if (treeviewMenu.classList.contains("max-h-0")) {
+              // If the menu is collapsed, expand it
+              treeviewMenu.classList.remove("max-h-0");
+              treeviewMenu.classList.add("max-h-[500px]"); // You can adjust this height based on content size
+            } else {
+              // If the menu is expanded, collapse it
+              treeviewMenu.classList.remove("max-h-[500px]");
+              treeviewMenu.classList.add("max-h-0");
+            }
+
+            // Optionally, you can also rotate the indicator arrow
+            const indicator = this.querySelector(".treeview-indicator");
+            indicator.classList.toggle("fa-angle-right");
+            indicator.classList.toggle("fa-angle-down");
+          });
+        });
     </script>
   </body>
 </html>
