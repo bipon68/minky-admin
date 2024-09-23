@@ -1443,9 +1443,6 @@ select.form-control-lg:not([size]):not([multiple]) {
     margin-bottom: 0;
   }
 }
-
-
-
 /* Button base styles */
 .btn {px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none
 }
