@@ -34,29 +34,28 @@
         href="index.html"
         >Minky</a
       >
-      <!-- Sidebar toggle button-->
-      <a
-        class="transition-colors duration-300 ease-in-out app-sidebar__toggle"
+      <!-- Sidebar toggle button--><a
+        class="transition-colors duration-300 ease-in-out"
         href="#"
         data-toggle="sidebar"
         aria-label="Hide Sidebar"
       ></a>
       <!-- Navbar Right Menu-->
-      <ul class="flex justify-end mb-0 app-nav">
-        <li class="app-search relative flex self-center mr-4 py-2.5">
+      <ul class="flex justify-end mb-0">
+        <li class="relative flex self-center mr-4 py-2.5">
           <input
-            class="app-search__input border-0 py-1 px-7.5 rounded-2px bg-rgba-white-80 transition-colors duration-300 ease-in-out"
+            class="border-0 py-1 px-7.5 rounded-2px bg-rgba-white-80 transition-colors duration-300 ease-in-out"
             type="search"
             placeholder="Search"
           />
           <button
-            class="app-search__button absolute right-0 top-2.5 bottom-2.5 px-2.5 border-0 text-rgba-black-80 bg-transparent cursor-pointer"
+            class="absolute right-0 top-2.5 bottom-2.5 px-2.5 border-0 text-rgba-black-80 bg-transparent cursor-pointer"
           >
             <i class="fa fa-search"></i>
           </button>
         </li>
         <!--Notification Menu-->
-        <li class="dropdown">
+        <li class="relative">
           <a
             class="block p-4 text-white transition-colors duration-300 ease-in-out leading-20px"
             href="#"
@@ -64,7 +63,9 @@
             aria-label="Show notifications"
             ><i class="fa fa-bell fa-lg"></i
           ></a>
-          <ul class="w-[270px] dropdown-menu dropdown-menu-right">
+          <ul
+            class="w-[270px] absolute top-full left-0 z-1000 hidden float-left min-w-[10rem] p-0 m-0 text-sm text-gray-900 text-left list-none bg-white bg-clip-padding border-0 border-transparent rounded right-0"
+          >
             <li
               class="flex justify-center w-full px-1 py-2 text-center text-gray-800 bg-custom-teal"
             >
@@ -442,12 +443,14 @@
         </li>
       </ul>
     </aside>
-    <main class="app-content">
+    <main class="ml-[270px] mt-[80px]">
       <div
         class="flex items-center justify-between flex-row bg-white mx-[-30px] my-[-30px] mb-[30px] p-[20px_30px] shadow-sm"
       >
         <div>
-          <h1><i class="fa fa-dashboard"></i> Dashboard</h1>
+          <h1 class="mt-0 mb-[0.5rem]">
+            <i class="fa fa-dashboard"></i> Dashboard
+          </h1>
           <p>A free and open source Tailwind admin template</p>
         </div>
         <ul class="app-breadcrumb breadcrumb">
@@ -495,16 +498,20 @@
       </div>
       <div class="flex flex-wrap w-full pr-4">
         <div class="flex w-1/2">
-          <div class="w-full tile">
-            <h3 class="tile-title">Monthly Sales</h3>
+          <div
+            class="relative bg-white rounded-md p-5 shadow-md mb-7 transition-all duration-300 ease-in-out w-full"
+          >
+            <h3 class="mt-0 mb-5 text-xl">Monthly Sales</h3>
             <div class="embed-responsive embed-responsive-16by9">
               <canvas class="embed-responsive-item" id="lineChartDemo"></canvas>
             </div>
           </div>
         </div>
         <div class="flex w-1/2 pl-4">
-          <div class="w-full tile">
-            <h3 class="tile-title">Support Requests</h3>
+          <div
+            class="relative bg-white rounded-md p-5 shadow-md mb-7 transition-all duration-300 ease-in-out w-full"
+          >
+            <h3 class="mt-0 mb-5 text-xl">Support Requests</h3>
             <div class="embed-responsive embed-responsive-16by9">
               <canvas class="embed-responsive-item" id="pieChartDemo"></canvas>
             </div>
@@ -513,8 +520,10 @@
       </div>
       <div class="flex flex-wrap w-full pr-4">
         <div class="flex w-1/2">
-          <div class="tile">
-            <h3 class="tile-title">Features</h3>
+          <div
+            class="relative bg-white rounded-md p-5 shadow-md mb-7 transition-all duration-300 ease-in-out"
+          >
+            <h3 class="mt-0 mb-5 text-xl">Features</h3>
             <ul>
               <li>Built with Tailwind, SASS and PUG.js</li>
               <li>Fully responsive and modular code</li>
@@ -544,19 +553,30 @@
               about customizing the theme colors and functionality.
             </p>
             <p class="mt-4 mb-4">
-              <a class="mb-2 mr-2 btn btn-primary" href="#" target="_blank"
+              <a
+                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none focus:shadow-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none text-white bg-teal-600 border-teal-600 hover:bg-teal-700 hover:border-teal-700 active:bg-teal-700 active:border-teal-800 mr-2 mb-2"
+                href="#"
+                target="_blank"
                 ><i class="fa fa-file"></i>Docs</a
-              ><a class="mb-2 mr-2 btn btn-info" href="#" target="_blank"
+              ><a
+                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none focus:shadow-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none text-white bg-cyan-600 border-cyan-600 hover:bg-cyan-700 hover:border-cyan-700 active:bg-cyan-700 active:border-cyan-800 mr-2 mb-2"
+                href="#"
+                target="_blank"
                 ><i class="fa fa-github"></i>GitHub</a
-              ><a class="mb-2 mr-2 btn btn-success" href="#" target="_blank"
+              ><a
+                class="px-3 py-1.5 text-sm leading-6 inline-block font-bold text-center whitespace-nowrap align-middle select-none border-2 border-transparent rounded transition duration-300 ease-in-out hover:shadow-md transform hover:scale-105 cursor-pointer no-underline focus:outline-none focus:shadow-none disabled:opacity-65 disabled:cursor-not-allowed active:bg-none text-white bg-green-600 border-green-600 hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-800 mr-2 mb-2"
+                href="#"
+                target="_blank"
                 ><i class="fa fa-download"></i>Download</a
               >
             </p>
           </div>
         </div>
         <div class="flex w-1/2 pl-4">
-          <div class="tile">
-            <h3 class="tile-title">Compatibility with frameworks</h3>
+          <div
+            class="relative bg-white rounded-md p-5 shadow-md mb-7 transition-all duration-300 ease-in-out"
+          >
+            <h3 class="mt-0 mb-5 text-xl">Compatibility with frameworks</h3>
             <p>
               This theme is not built for a specific framework or technology
               like Angular or React etc. But due to it's modular nature it's
@@ -681,7 +701,6 @@
               treeviewMenu.classList.remove("max-h-[500px]");
               treeviewMenu.classList.add("max-h-0");
             }
-
             // Optionally, you can also rotate the indicator arrow
             const indicator = this.querySelector(".treeview-indicator");
             indicator.classList.toggle("fa-angle-right");
