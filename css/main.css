@@ -1449,7 +1449,7 @@ select.form-control-lg:not([size]):not([multiple]) {
 
 
 /* Button color variations */
-.btn-primary { text-white bg-teal-600 border-teal-600 hover:bg-teal-700 hover:border-teal-700 focus:shadow-none active:bg-teal-700 active:border-teal-800
+.btn-primary { text-white bg-teal-600 border-teal-600 hover:bg-teal-700 hover:border-teal-700  active:bg-teal-700 active:border-teal-800
 }
 
 .btn-secondary {
@@ -12073,7 +12073,8 @@ be a descendant of the grid when it is being dragged.
 }
 
 .btn {
-  no-underline transform translate-y-[-1px] custom-shadow hover:no-underline focus:no-underline
+  px-3 py-1.5 text-sm  font-bold text-center  border-2 border-transparent  transition duration-300  hover:shadow-md transform  cursor-pointer no-underline  active:bg-none text-white bg-gray-600 border-gray-600 hover:bg-gray-700 hover:border-gray-700 focus:shadow-none active:bg-gray-700 active:border-gray-800 rounded-l
+
 }
 
 .btn .icon,
